@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "author": "tu nombre",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-breadboard-half",
+      "id": "bb1",
+      "top": 216.9,
+      "left": -83.1,
+      "rotate": 270,
+      "attrs": {}
+    },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp32", "top": 249.6, "left": 33.64, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": 63.6, "left": 138.2, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 205.55,
+      "left": 163.2,
+      "rotate": 180,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 120,
+      "left": 300,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "bb1:5t.b",  "r1:1",    "orange", [] ],
+    [ "r1:2",      "led1:A",  "orange", [] ],
+    [ "led1:C",    "bb1:7t.b","black",  [] ],
+
+    [ "bb1:8b.j",  "btn1:1.l", "green", [] ],
+    [ "btn1:2.l",  "bb1:20t.b","red",   [] ],
+
+    [ "esp32:0",    "bb1:7b.j",  "", [ "$bb" ] ],
+    [ "esp32:2",    "bb1:6b.j",  "", [ "$bb" ] ],
+    [ "esp32:4",    "bb1:8b.j",  "", [ "$bb" ] ],
+    [ "esp32:5",    "bb1:11b.j", "", [ "$bb" ] ],
+    [ "esp32:12",   "bb1:8t.b",  "", [ "$bb" ] ],
+    [ "esp32:13",   "bb1:6t.b",  "", [ "$bb" ] ],
+    [ "esp32:14",   "bb1:9t.b",  "", [ "$bb" ] ],
+    [ "esp32:15",   "bb1:5b.j",  "", [ "$bb" ] ],
+    [ "esp32:16",   "bb1:9b.j",  "", [ "$bb" ] ],
+    [ "esp32:17",   "bb1:10b.j", "", [ "$bb" ] ],
+    [ "esp32:18",   "bb1:12b.j", "", [ "$bb" ] ],
+    [ "esp32:19",   "bb1:13b.j", "", [ "$bb" ] ],
+    [ "esp32:21",   "bb1:15b.j", "", [ "$bb" ] ],
+    [ "esp32:22",   "bb1:18b.j", "", [ "$bb" ] ],
+    [ "esp32:23",   "bb1:19b.j", "", [ "$bb" ] ],
+    [ "esp32:25",   "bb1:12t.b", "", [ "$bb" ] ],
+    [ "esp32:26",   "bb1:11t.b", "", [ "$bb" ] ],
+    [ "esp32:27",   "bb1:10t.b", "", [ "$bb" ] ],
+    [ "esp32:32",   "bb1:14t.b", "", [ "$bb" ] ],
+    [ "esp32:33",   "bb1:13t.b", "", [ "$bb" ] ],
+    [ "esp32:34",   "bb1:16t.b", "", [ "$bb" ] ],
+    [ "esp32:35",   "bb1:15t.b", "", [ "$bb" ] ],
+    [ "esp32:3V3",  "bb1:20t.b", "", [ "$bb" ] ],
+    [ "esp32:EN",   "bb1:19t.b", "", [ "$bb" ] ],
+    [ "esp32:VP",   "bb1:18t.b", "", [ "$bb" ] ],
+    [ "esp32:VN",   "bb1:17t.b", "", [ "$bb" ] ],
+    [ "esp32:GND.1","bb1:7t.b",  "", [ "$bb" ] ],
+    [ "esp32:D2",   "bb1:5t.b",  "", [ "$bb" ] ],
+    [ "esp32:D3",   "bb1:4t.b",  "", [ "$bb" ] ],
+    [ "esp32:CMD",  "bb1:3t.b",  "", [ "$bb" ] ],
+    [ "esp32:5V",   "bb1:2t.b",  "", [ "$bb" ] ],
+    [ "esp32:GND.2","bb1:20b.j", "", [ "$bb" ] ],
+    [ "esp32:TX",   "bb1:17b.j", "", [ "$bb" ] ],
+    [ "esp32:RX",   "bb1:16b.j", "", [ "$bb" ] ],
+    [ "esp32:GND.3","bb1:14b.j", "", [ "$bb" ] ],
+    [ "esp32:D1",   "bb1:4b.j",  "", [ "$bb" ] ],
+    [ "esp32:D0",   "bb1:3b.j",  "", [ "$bb" ] ],
+    [ "esp32:CLK",  "bb1:2b.j",  "", [ "$bb" ] ]
+  ],
+  "dependencies": {}
+}
