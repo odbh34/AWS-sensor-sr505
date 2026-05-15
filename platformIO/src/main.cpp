@@ -5,8 +5,8 @@
 #define SENSOR_PIN 13
 #define LED_INTERNO 2
 
-const char* ssid     = "WILLIANS";
-const char* password = "w1n5t0n@97";
+const char* ssid     = "HONOR X7";
+const char* password = "0123456789";
 const char* serverUrl = "http://18.222.199.177:5000/sensor";
 
 void setup() {
